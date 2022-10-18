@@ -6,7 +6,8 @@ import boto3
 from botocore.exceptions import ClientError
 
 
-REALM_DIR_LOCATION = "/c/Users/Daniel/AppData/Roaming/Stashpad/"
+#REALM_DIR_LOCATION = "/c/Users/Daniel/AppData/Roaming/Stashpad/"
+REALM_DIR_LOCATION = "/mnt/c/Users/15san/AppData/Roaming/Stashpad/"
 REALM_FILE_NAME = "data.realm"
 BUCKET_NAME = "cdev-bucket-f206d6f16c5816e9215949f6021aeb1b"
 
@@ -20,7 +21,7 @@ def pull_new_version() -> None:
     
     get_last_modified_expr = lambda obj: int(obj['LastModified'].strftime('%s'))
 
-    objs = s3.list_objects_v2(Bucket='my_bucket')['Contents']
+    objs = s3.list_objects_v2(Bucket=BUCKET_NAME)['Contents']
     last_added = [obj['Key'] for obj in sorted(objs, key=get_last_modified_expr)][0]
 
 
@@ -66,3 +67,4 @@ def upload_file(file_name: str, bucket: str, object_name=None):
 
 
 push_new_version()
+#pull_new_version()
