@@ -1,0 +1,38 @@
+{
+    "name": "dev",
+    "uuid": "6be8ff73-7128-43cd-9fd6-6ac60a28276c",
+    "components": [
+        {
+            "name": "stashpad_sync_comp",
+            "hash": "f065cc8e9d69c3d9f89411a47fbb38bb",
+            "resources": [
+                {
+                    "name": "stashpad_sync",
+                    "ruuid": "cdev::simple::bucket",
+                    "hash": "9eecb7db59d16c80417c72d1e1f4fbf1",
+                    "tags": {}
+                }
+            ],
+            "references": [],
+            "cloud_output": {
+                "cdev::simple::bucket;stashpad_sync": {
+                    "bucket_name": "cdev-bucket-f206d6f16c5816e9215949f6021aeb1b",
+                    "cloud_id": "arn:aws:s3:::cdev-bucket-f206d6f16c5816e9215949f6021aeb1b",
+                    "arn": "arn:aws:s3:::cdev-bucket-f206d6f16c5816e9215949f6021aeb1b",
+                    "cloud_region": "us-east-1"
+                }
+            },
+            "previous_resolved_cloud_values": {
+                "cdev::simple::bucket;stashpad_sync": {}
+            },
+            "external_references": {}
+        }
+    ],
+    "component_name_to_uuid": {
+        "stashpad_sync_comp": "99230dc4-3741-4a17-8cb5-1f2c3695cb84"
+    },
+    "parent_uuid": null,
+    "children": [],
+    "resource_changes": {},
+    "failed_changes": {}
+}

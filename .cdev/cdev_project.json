@@ -1,0 +1,100 @@
+{
+    "project_name": "stashpad-sync",
+    "environment_infos": [
+        {
+            "name": "prod",
+            "workspace_info": {
+                "python_module": "core.default.workspace",
+                "python_class": "local_workspace",
+                "settings_info": {
+                    "base_class": "core.constructs.settings.Settings",
+                    "user_setting_module": [
+                        "settings.base_settings",
+                        "settings.prod_settings"
+                    ],
+                    "secret_dir": "settings/prod_secrets"
+                },
+                "backend_info": {
+                    "python_module": "core.default.backend",
+                    "python_class": "LocalBackend",
+                    "config": {
+                        "base_folder": ".cdev/state",
+                        "central_state_file": ".cdev/state/central_state.json"
+                    }
+                },
+                "resource_state_uuid": "1a229f03-3851-4742-bb35-2bea483aceb1",
+                "initialization_modules": [
+                    "src.cdev_project"
+                ],
+                "config": {}
+            }
+        },
+        {
+            "name": "stage",
+            "workspace_info": {
+                "python_module": "core.default.workspace",
+                "python_class": "local_workspace",
+                "settings_info": {
+                    "base_class": "core.constructs.settings.Settings",
+                    "user_setting_module": [
+                        "settings.base_settings",
+                        "settings.stage_settings"
+                    ],
+                    "secret_dir": "settings/stage_secrets"
+                },
+                "backend_info": {
+                    "python_module": "core.default.backend",
+                    "python_class": "LocalBackend",
+                    "config": {
+                        "base_folder": ".cdev/state",
+                        "central_state_file": ".cdev/state/central_state.json"
+                    }
+                },
+                "resource_state_uuid": "f2fe8536-306f-4679-b310-e1e2201f08dd",
+                "initialization_modules": [
+                    "src.cdev_project"
+                ],
+                "config": {}
+            }
+        },
+        {
+            "name": "dev",
+            "workspace_info": {
+                "python_module": "core.default.workspace",
+                "python_class": "local_workspace",
+                "settings_info": {
+                    "base_class": "core.constructs.settings.Settings",
+                    "user_setting_module": [
+                        "settings.base_settings",
+                        "settings.dev_settings"
+                    ],
+                    "secret_dir": "settings/dev_secrets"
+                },
+                "backend_info": {
+                    "python_module": "core.default.backend",
+                    "python_class": "LocalBackend",
+                    "config": {
+                        "base_folder": ".cdev/state",
+                        "central_state_file": ".cdev/state/central_state.json"
+                    }
+                },
+                "resource_state_uuid": "6be8ff73-7128-43cd-9fd6-6ac60a28276c",
+                "initialization_modules": [
+                    "src.cdev_project"
+                ],
+                "config": {}
+            }
+        }
+    ],
+    "default_backend_configuration": {
+        "python_module": "core.default.backend",
+        "python_class": "LocalBackend",
+        "config": {
+            "base_folder": ".cdev/state",
+            "central_state_file": ".cdev/state/central_state.json"
+        }
+    },
+    "current_environment_name": "dev",
+    "settings_directory": "settings",
+    "initialization_module": "src.cdev_project"
+}
